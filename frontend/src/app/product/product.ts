@@ -49,7 +49,10 @@ export class ProductComponent implements OnInit {
     }
 
     this.loading = true;
-    const url = this.searchTerm ? `http://localhost:5000/products?search=${encodeURIComponent(this.searchTerm)}` : 'http://localhost:5000/products';
+   const url = this.searchTerm
+  ? `https://agriconnectbackend-2.onrender.com/products?search=${encodeURIComponent(this.searchTerm)}`
+  : 'https://agriconnectbackend-2.onrender.com/products';
+
     
     this.http.get<Product[]>(url, { 
       headers: { Authorization: `Bearer ${this.token}` } 
