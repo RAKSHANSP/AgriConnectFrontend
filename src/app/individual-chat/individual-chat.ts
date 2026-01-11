@@ -50,7 +50,7 @@ export class IndividualChat implements OnInit {
   }
 
   loadUsers() {
-    this.http.get<User[]>('http://localhost:5000/users', {
+    this.http.get<User[]>(`https://agriconnectbackend-2.onrender.com/users`, {
       headers: { Authorization: `Bearer ${this.token}` }
     }).subscribe({
       next: (data) => this.users = data,

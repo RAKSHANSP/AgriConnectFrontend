@@ -28,7 +28,7 @@ export class InformationSharing {
   token = localStorage.getItem('token') || '';
   commentText: string = '';
   selectedPostId: string = '';
-  backendUrl = 'http://localhost:5000';
+  backendUrl = 'https://agriconnectbackend-2.onrender.com'; // Adjust as needed
 
   constructor(private http: HttpClient) {
     this.loadPosts();

@@ -65,7 +65,7 @@ export class GroupChat implements OnInit {
     }
 
     this.loading = true;
-    const url = 'http://localhost:5000/group-messages/global'; // Adjust if using a different groupId
+    const url = 'https://agriconnectbackend-2.onrender.com/group-messages/global'; // Adjust if using a different groupId
 
     this.http.get<GroupMessage[]>(url, { 
       headers: { Authorization: `Bearer ${this.token}` } 
