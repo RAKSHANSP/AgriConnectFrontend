@@ -1,15 +1,11 @@
 pipeline {
     agent any
 
-    tools {
-        sonarQube 'SonarScanner'
-    }
-
     stages {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/frontend-project.git'
+                git 'https://github.com/RAKSHANSP/AgriConnectFrontend.git'
             }
         }
 
